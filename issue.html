@@ -7,10 +7,8 @@
   
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- FontAwesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
   <!-- Google Fonts: Poppins and Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   
@@ -24,7 +22,6 @@
     <div class="pre-header">
       <span class="journal-title">Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT)</span>
     </div>
-
     <!-- Header with Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="index.html">
@@ -51,9 +48,9 @@
             <a class="nav-link" href="sub-guide.html"><i class=""></i> SUBMISSION GUIDELINES</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="https://drive.google.com/drive/folders/1WkABoNZ7CMeh-wqDVY3N9A9u0EUB9X9U?usp=sharing"><i class=""></i> ARTICLES</a>
+            <a class="nav-link" href="browse.html"><i class=""></i> ARTICLES</a>
           </li>
-          <!-- <li class="nav-item">
+<!--           <li class="nav-item">
             <a class="nav-link" href="https://forms.gle/jgJ2BqafzfFpvGW67"><i class=""></i> SUBMIT PAPER</a>
           </li>  -->
         </ul>
@@ -74,7 +71,6 @@
       <!-- This will be populated by JavaScript -->
     </div>
   </div>
-
   <footer id="footer">
     <p1>Thiagarajar College of Engineering, Madurai - 625 015, Tamilnadu, India.</p1><br>
     <p1>Contact us at: <a href="mailto:tjesdt@res.tce.edu">tjesdt@res.tce.edu</a> | <a>Phone: +91 452 2482240</a> | <a href="https://www.tce.edu">www.tce.edu</a></p1><br>
@@ -87,12 +83,10 @@
       <a href="https://www.youtube.com/ThiagarajarCollegeofEngineeringTCE"><img alt="ta" src="img/yt.png" style="width: 2em; height: 2em;"></a>
     </div>
   </footer>
-
   <!-- Bootstrap JS, jQuery, and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
   <script>
     // Sample journal data - in a real implementation, this could be stored in separate JSON files
     const journalData = {
@@ -111,17 +105,24 @@
           ]
         }
       },
-      ?
-         "issue2": {
-           "title": "Issue 1 (Special Issue)",
-           "papers": [
-           {
+      "vol2": {
+        "year": 2025,
+        "issue1": {
+          "title": "Issue 2 (upcoming)",
+          "papers": [
+           
+          ]
+        },
+        "issue2": {
+          "title": "Issue 1 (In-press)",
+          "papers": [
+          {
              
-              "title": "Energywise - An Energy Audit: A Web-Based Approach for Preliminary Energy Audits",
-              "authors": "Praveen Kumar M, Charles Raja S, Vishnu Dharssini A C",
-              "pages": "1-12",
-              "downloadUrl": "#"
-            },
+             "title": "Energywise - An Energy Audit: A Web-Based Approach for Preliminary Energy Audits",
+             "authors": "Praveen Kumar M, Charles Raja S, Vishnu Dharssini A C",
+             "pages": "1-12",
+             "downloadUrl": "#"
+           },
            {
              
              "title": "Investigation of Wettability Characteristics on Epoxy/Cu-RGO Nanocomposites Coated Copper Surfaces",
@@ -291,7 +292,6 @@
         }
       }
     };
-
     // Function to get URL parameters
     function getUrlParams() {
       const params = {};
@@ -305,7 +305,6 @@
       
       return params;
     }
-
     // Function to display issue details
     function displayIssueDetails() {
       const params = getUrlParams();
@@ -366,7 +365,6 @@
       
       papersListDiv.innerHTML = tableHTML;
     }
-
     // Function to display not found message
     function displayNotFound() {
       const issueDetailsDiv = document.getElementById('issueDetails');
@@ -379,7 +377,6 @@
       
       document.getElementById('papersList').innerHTML = '';
     }
-
     // Initialize the page
     document.addEventListener('DOMContentLoaded', displayIssueDetails);
   </script>
