@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<!-- 
+  Project: TCE Journal Web App
+  Developed by:
+    ASWINKUMAR I - 8825558350
+    PRAVEEN KUMAR T V - 8248942776
+-->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +28,7 @@
   <header>
     <!-- Pre-header with Journal Title -->
     <div class="pre-header">
-      <span class="journal-title">Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT)</span>
+      <span class="journal-title">Thiagarajar Journal of Engineering, Science, Design and Technology (TJESDT)</span>
     </div>
     <!-- Header with Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -111,6 +119,20 @@
         "issue1": {
           "title": "Issue 1 (Special Issue)",
           "papers": [
+          {
+             
+             "title": "Front Cover",
+             "authors": "nil",
+              "pages": "",
+             "downloadUrl": "https://drive.usercontent.google.com/download?id=1o4ESxQXm-3xhY-ZodemcLqmph2ymHwcI&export=download&authuser=0&confirm=t&uuid=0c51eea3-eda6-427d-9193-dd036926e094&at=ALoNOgnADHDcXwiQ-8iN7UujSlQe:1747123252210"
+           },
+           {
+             
+             "title": "Table of Contents",
+             "authors": "nil",
+              "pages": "",
+             "downloadUrl": "https://drive.google.com/uc?export=download&id=1TgPd3aI6bbp5AAAh0laBdj411o0ZZ4qQ"
+           },
           {
              
              "title": "Energywise - An Energy Audit: A Web-Based Approach for Preliminary Energy Audits",
@@ -298,7 +320,14 @@
               "authors": "Kodipandyan R, Vinoth Thyagarajan V, Ubasini M, Rishapa P",
               "pages": "53–56",
               "downloadUrl": "https://drive.google.com/uc?export=download&id=18HEm8jZmMI3rbrNHVUpueqN2TUnECgO7"
-            }
+            },
+            {
+             
+             "title": "Back Cover",
+             "authors": "nil",
+              "pages": "",
+             "downloadUrl": "https://drive.usercontent.google.com/download?id=1OzHiGUZfPgtZQ1oC6VQHuN-qustxY6W0&export=download&authuser=0&confirm=t&uuid=54b7317b-ca3e-4d12-a02e-96cd66457f43&at=ALoNOgmeCvnu_VEbx_kX19mRFIiL:1747123348390"
+           }
           ]
         }
       }
@@ -345,13 +374,26 @@
           <thead>
             <tr>
              
-              <th style="width: 85%;text-align: center;">Sustainability: Advancing towards a Resilient&nbsp;Future</th>
+              <th style="width: 85%;text-align: center;font-size:21px;">Sustainability: Advancing towards a Resilient&nbsp;Future</th>
             </tr>
           </thead>
           <tbody>
       `;
       
       issueData.papers.forEach(paper => {
+        if(paper.authors==="nil"){
+          tableHTML += `
+          <tr>
+            
+            <td>
+              <div class="paper-title">${paper.title}</div>
+              <a href="${paper.downloadUrl}" class="download-btn">
+                <i class="fas fa-download"></i> Download PDF
+              </a>
+            </td>
+          </tr>
+        `;
+        }else{
         tableHTML += `
           <tr>
             
@@ -367,6 +409,7 @@
             </td>
           </tr>
         `;
+        }
       });
       
       tableHTML += `
