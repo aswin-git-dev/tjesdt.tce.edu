@@ -113,6 +113,20 @@
           "papers": [
           {
              
+             "title": "Front Cover",
+             "authors": "nil",
+              "pages": "",
+             "downloadUrl": "https://drive.google.com/uc?export=download&id=1eJ-GceBVav0e1WAnuTEarK9TMWDRlX6f"
+           },
+           {
+             
+             "title": "Table of Contents",
+             "authors": "nil",
+              "pages": "",
+             "downloadUrl": "https://drive.google.com/uc?export=download&id=1TgPd3aI6bbp5AAAh0laBdj411o0ZZ4qQ"
+           },
+          {
+             
              "title": "Energywise - An Energy Audit: A Web-Based Approach for Preliminary Energy Audits",
              "authors": "Praveen Kumar M, Charles Raja S, Vishnu Dharssini A C, Ashok Kumar L",
              "pages": "1-4",
@@ -298,7 +312,14 @@
               "authors": "Kodipandyan R, Vinoth Thyagarajan V, Ubasini M, Rishapa P",
               "pages": "53–56",
               "downloadUrl": "https://drive.google.com/uc?export=download&id=18HEm8jZmMI3rbrNHVUpueqN2TUnECgO7"
-            }
+            },
+            {
+             
+             "title": "Back Cover",
+             "authors": "nil",
+              "pages": "",
+             "downloadUrl": "https://drive.google.com/uc?export=download&id=1RuRf21zcRScNHvSX5EVOqcTP3nY0DP8b"
+           }
           ]
         }
       }
@@ -352,6 +373,19 @@
       `;
       
       issueData.papers.forEach(paper => {
+        if(paper.authors==="nil"){
+          tableHTML += `
+          <tr>
+            
+            <td>
+              <div class="paper-title">${paper.title}</div>
+              <a href="${paper.downloadUrl}" class="download-btn">
+                <i class="fas fa-download"></i> Download PDF
+              </a>
+            </td>
+          </tr>
+        `;
+        }else{
         tableHTML += `
           <tr>
             
@@ -367,6 +401,7 @@
             </td>
           </tr>
         `;
+        }
       });
       
       tableHTML += `
