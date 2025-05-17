@@ -9,6 +9,29 @@ body {
   
 }
 
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#backToTopBtn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-3px);
+}
+
 .edit-policy p{
   padding-left:27px;
 }
