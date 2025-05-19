@@ -9,6 +9,16 @@ body {
   
 }
 
+.navbar-brand-logo{
+     padding: 0;
+      margin: 0;
+      max-height: 80px;
+      width:auto;
+      display: flex;
+      align-items: center;
+
+}
+
 #backToTopBtn {
   position: fixed;
   bottom: 20px;
